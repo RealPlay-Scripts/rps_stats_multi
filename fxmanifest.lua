@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'CFRP'
-description 'Kill/Death tracking for CFRP web portal - Multi Framework'
+description 'Kill/Death tracking for rps web portal - Multi Framework'
 version '2.0.0'
 
 server_scripts {
