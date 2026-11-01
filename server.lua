@@ -8,10 +8,13 @@
 ]]
 
 -- ═══════════════════════════════════════════════════════
---  WEB API CONFIG  ← point at your website
+--  WEB API CONFIG — set as server convars in server.cfg, never commit
+--  real values here:
+--    set rps_stats_api_url "https://yoursite.example/api/server/stats"
+--    set rps_stats_api_key "your-fivem-api-key"   (write scope only)
 -- ═══════════════════════════════════════════════════════
-local WEB_API_URL = "https://web.goldenshoresrp.com/api/server/stats"
-local WEB_API_KEY = "9f86a916e2fa51e6a801451a1e621813a1b3294889adaf994ac9b2d861ffa73d"
+local WEB_API_URL = GetConvar('rps_stats_api_url', 'https://yoursite.example/api/server/stats')
+local WEB_API_KEY = GetConvar('rps_stats_api_key', '')
 
 local function PostToWebAPI(payload)
     PerformHttpRequest(WEB_API_URL, function(code, text)
